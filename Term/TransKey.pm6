@@ -2,6 +2,10 @@ unit module Term::Transkey;
 
 use Term::ReadKey:from<Perl5>;
 
+# This code heavily borrows from the Perl5 lib Term::Transkeys (albeit in Perl6)
+# since the Term::ReadKeys module didn't seem to be able to be used with Inline::Perl5
+# so borrowed the key sequences needed from its source here:
+#   https://metacpan.org/pod/release/EXODIST/Term-TransKeys-1.01/lib/Term/TransKeys.pm
 sub ReadInput() is export {
     ReadMode 3;
     my @codes = ();    
